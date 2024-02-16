@@ -1,30 +1,52 @@
 package application;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
 
-import db.DB;
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
+import model.entities.Department;
+import model.entities.Seller;
 
 public class Program {
 	public static void main(String[] args) {
-		Connection conn = null; 
-		PreparedStatement stat = null; 
-		ResultSet rs = null; 
-		
-		try {
+	
+		Scanner sc = new Scanner(System.in);  
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		
-		}catch(SQLException e) {
-			System.out.println(e.getMessage());
-			
-		}finally {
-			DB.closeResultSet(rs);
-			DB.closeStatement(stat);
-			DB.closeConnection();
+		
+		Department dep = new Department(2, null);
+		List<Seller> list = sellerDao.findByDepartment(dep);
+		
+		for(Seller obj : list) {	
+			System.out.println(obj);
 		}
 		
+		System.out.println("Find all: ");
+		list = sellerDao.findAll(); 
+		for(Seller obj : list) {
+			System.out.println(obj);
+			
+		}
+		
+		System.out.println("Inserção *teste*");
+		Seller seller = new Seller(null, "Greg", "Greg@gmail.com", new Date(), 4000.0, dep);
+		sellerDao.insert(seller);
+		System.out.println("Inserted successfully! New id: " + seller.getId());
+
+		
+		System.out.println("Update *teste*");
+		seller = sellerDao.findById(1);
+		seller.setName("Pedro");
+		sellerDao.update(seller); 
+		System.out.println("update completed");
+	
+		System.out.println("Delete *teste*");
+		System.out.println("Digite o Id");
+		int id = sc.nextInt(); 
+		sellerDao.deleteById(id);
+		System.out.println("Delete completed");
 	}
 }
