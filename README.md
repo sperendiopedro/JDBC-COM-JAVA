@@ -41,7 +41,7 @@ As entidades não tem segredo, são as classes padrão java, com atributos e get
 
 São interfaces e é aonde o nosso projeto vai se comunicar com o banco de dados, são as queries do SQL que serão executadas conforme a demanda da nossa aplicação. 
 em outras palavras, é o "insert", "update" e etc. Dá uma lida nas interfaces e na implementação. 
-#### OBS.2: Todos as queries são implementadas dentro da package "impl", lá vc vai entender como fazer as queries. 
+#### OBS.2: Todos as queries são implementadas dentro da package "impl", lá vc vai entender como fazer.
 
 #### Package application
 Aqui se encontra a "main" é onde o programa vai rodar, ali é onde eu manipulo a inserção, alteração, exclusão e etc. dos dados, talvez os botões vão ficar do mesmo jeito que tá aqui na main, eu acho.... kkkkk
