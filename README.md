@@ -38,12 +38,13 @@ Essa package lida com as entidades e seus respectivos DAOs (ou repo).
 As entidades não tem segredo, são as classes padrão java, com atributos e get, setters e etc. O que vale a pena focar nessa seção é sobre os Repos: 
 
 ##### DAOs (ou repos):
-É aonde o nosso projeto vai se comunicar com o banco de dados, são as queries do SQL que serão executadas conforme a demanda da nossa aplicação. 
-obs: é o "insert", "update" e etc. Leia as classes que você entenderá melhor. 
-#### OBS.2: Todos as queries são implementadas dentro da package "impl", lá vc vai entender tudo. 
+
+São interfaces e é aonde o nosso projeto vai se comunicar com o banco de dados, são as queries do SQL que serão executadas conforme a demanda da nossa aplicação. 
+em outras palavras, é o "insert", "update" e etc. Dá uma lida nas interfaces e na implementação. 
+#### OBS.2: Todos as queries são implementadas dentro da package "impl", lá vc vai entender como fazer as queries. 
 
 #### Package application
 Aqui se encontra a "main" é onde o programa vai rodar, ali é onde eu manipulo a inserção, alteração, exclusão e etc. dos dados, talvez os botões vão ficar do mesmo jeito que tá aqui na main, eu acho.... kkkkk
 
 
-flw espero ajudar abraços.
+flw espero ajudar, se você quiser fazer uma autenticação simples, pensei em criar um atributo chamado "autenticated" em algum lugar, que eu não sei aonde, e vai buscar no banco de dado se o usuario e a senha conferem, se sim seta o atributo como true e deixa o conteudo q vc quer exibir visível, se não manda exibe uma mensagem, sei lá...
