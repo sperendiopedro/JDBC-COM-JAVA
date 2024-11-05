@@ -21,10 +21,11 @@ obs: é o "insert", "update" e etc. Leia as classes que você entenderá melhor.
 
 ### NÃO ESQUEÇA DE DENTRO DA PASTA "src" CRIAR UM ARQUIVO COM O NOME DE db.properties É ALI QUE VOCÊ VAI PASSAR AS CREDENCIAIS DO BANCO
 AS credenciais vão ser algo tipo: 
-        user=root
-        password=rootpsswd
-        dburl=jdbc:mysql://localhost:3306/coursejdbc
-        useSSL=false
+<br></br>
+![Screenshot_20241105_165504](https://github.com/user-attachments/assets/3b03363c-0ec8-47dd-9a8a-b528773c96fa)
+<br></br>
+
+#### Lembrando que aqui eu to usando uma conexão via MySQL, eu recomendo vc usar o H2 pra vc n ter q configurar um banco do zero.
 
 o objeto do tipo "fileInputstream" vai ler essas credenciais lá na classe db, como é um projeto academico não tem problema deixar exposto no projeto. 
 
