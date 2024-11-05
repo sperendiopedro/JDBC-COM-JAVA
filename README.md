@@ -20,7 +20,7 @@ AS credenciais vão ser algo tipo:
 
 o objeto do tipo "fileInputstream" vai ler essas credenciais lá na classe db, como é um projeto academico não tem problema deixar exposto no projeto. 
 
-#### OBS.1: EU NÂO LEMBRO SE O classpath É CRIADO AUTOMATICAMENTE, MAS CASO NÃO FOR SÓ COPIAR O MEU. 
+#### OBS.1: EU NÂO LEMBRO SE O classpath É CRIADO AUTOMATICAMENTE, MAS CASO NÃO FOR SÓ COPIAR O MEU (ISSO SE VOCÊ TIVER USANDO O JAVA SE 17 E ECLIPSE Kkkkkk) 
 
 ### Agora vamos às classes e o que elas fazem!
 
