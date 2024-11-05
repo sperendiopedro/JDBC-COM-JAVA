@@ -1,11 +1,11 @@
 # Este projeto consinste em uma conexão com banco de dados utilizando o JDBC. 
 
-## O projeto consiste em 3 packages: A referente ao Database e suas configs, a que trabalha com as entidades e os DAOs (Repositorios) e a main onde o programa roda. 
+### O projeto consiste em 3 packages: A referente ao Database e suas configs, a que trabalha com as entidades e os DAOs (Repositorios) e a main onde o programa roda. 
 
 ### Package db: 
 Consiste de 3 classes: A "db", "dbexceptions" e "dbintegrityexception". 
 
-Sendo "db" a classe principal desse projeto, utilizamos de um combo de dois objetos para realizar a conexão com o banco de dados via props do JDBC. O primeiro objeto do tipo "Connection" para recuperar as infos da conexão, o objeto do tipo "Properties" para setar as props dentro do terceiro objeto do tipo "FileInputStream". 
+Sendo "db" a classe principal desse projeto, utilizamos de um combo de tipos de objetos para realizar a conexão com o banco de dados via props do JDBC. O primeiro objeto do tipo "Connection" para recuperar as infos da conexão, o objeto do tipo "Properties" para setar as props dentro do terceiro objeto do tipo "FileInputStream". 
 (Para saber mais sobres os objetos, recomendo ler sobre elas na web) 
 
 As outras duas classes da package lida apenas com as exceções que podem ocorrer ao instanciar uma nova conexão. 
@@ -18,3 +18,14 @@ As entidades não tem segredo, são as classes padrão java, com atributos e get
 DAOs (ou repos):
 É aonde o nosso projeto vai se comunicar com o banco de dados, são as queries do SQL que serão executadas conforme a demanda da nossa aplicação. 
 obs: é o "insert", "update" e etc. Leia as classes que você entenderá melhor. 
+
+### NÃO ESQUEÇA DE DENTRO DA PASTA "src" CRIAR UM ARQUIVO COM O NOME DE db.properties É ALI QUE VOCÊ VAI PASSAR AS CREDENCIAIS DO BANCO
+AS credenciais vão ser algo tipo: 
+        user=root
+        password=rootpsswd
+        dburl=jdbc:mysql://localhost:3306/coursejdbc
+        useSSL=false
+
+o objeto do tipo "fileInputstream" vai ler essas credenciais lá na classe db, como é um projeto academico não tem problema deixar exposto no projeto. 
+
+flw espero ajudar abraços.
