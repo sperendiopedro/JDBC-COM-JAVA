@@ -5,7 +5,7 @@
 ### Package db: 
 Consiste de 3 classes: A "db", "dbexceptions" e "dbintegrityexception". 
 
-Sendo "db" a classe principal desse projeto, utilizamos de um combo de tipos de objetos para realizar a conexão com o banco de dados via props do JDBC. O primeiro objeto do tipo "Connection" para recuperar as infos da conexão, o objeto do tipo "Properties" para setar as props dentro do terceiro objeto do tipo "FileInputStream". 
+Sendo "db" a classe principal desse projeto, utilizamos de um combo de tipos de objetos para realizar a conexão com o banco de dados via props do JDBC. O primeiro objeto do tipo "Connection" para recuperar as infos da conexão, o objeto do tipo "Properties" para setar as credenciais da conexão com o banco, que será lido do db.properties pelo terceiro objeto do tipo "FileInputStream". 
 (Para saber mais sobres os objetos, recomendo ler sobre elas na web) 
 
 As outras duas classes da package lida apenas com as exceções que podem ocorrer ao instanciar uma nova conexão. 
