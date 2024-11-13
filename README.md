@@ -2,15 +2,7 @@
 
 ### O projeto consiste em 3 pckages: A referente ao Database e suas configs, a que trabalha com as entidades e os DAOs (Repositorios) e a main onde o programa roda. 
 
-#### Antes de falar das packages e suas funcionalidades, vc precisa inserir a """dependencia""" do jdbc no seu projeto. 
-Você vai preciasr criar uma pasta dentro do 'src" com o nome de ".project" e lá vc vai inserir a """dependencia""", é um codigo tipo esse 
-<br></br>
-![Screenshot_20241105_175211](https://github.com/user-attachments/assets/7b0e699e-0a6a-44e5-83e1-b8888347c3f3)
-<br></br>
-
-Aproveitando que você tá criando pastas no src, é melhor já seguir esse passo aqui: 
-
-#### DENTRO DA PASTA "src" CRIAR UM ARQUIVO COM O NOME DE db.properties É ALI QUE VOCÊ VAI PASSAR AS CREDENCIAIS DO BANCO
+#### DENTRO DA "src" CRIAR UM ARQUIVO COM O NOME DE db.properties É ALI QUE VOCÊ VAI PASSAR AS CREDENCIAIS DO BANCO
 AS credenciais vão ser algo tipo: 
 <br></br>
 ![Screenshot_20241105_165504](https://github.com/user-attachments/assets/3b03363c-0ec8-47dd-9a8a-b528773c96fa)
@@ -20,15 +12,12 @@ AS credenciais vão ser algo tipo:
 
 o objeto do tipo "fileInputstream" vai ler essas credenciais lá na classe db, como é um projeto academico não tem problema deixar exposto no projeto. 
 
-#### OBS.1: EU NÂO LEMBRO SE O classpath É CRIADO AUTOMATICAMENTE, MAS CASO NÃO FOR SÓ COPIAR O MEU (ISSO SE VOCÊ TIVER USANDO O JAVA SE 17 E ECLIPSE Kkkkkk) 
-
-### Agora vamos às classes e o que elas fazem!
+### Agora é setar as connections nas classes
 
 #### Package db: 
 Consiste de 3 classes: A "db", "dbexceptions" e "dbintegrityexception". 
 
 Sendo "db" a classe principal desse projeto, utilizamos de um combo de tipos de objetos para realizar a conexão com o banco de dados via props do JDBC. O primeiro objeto do tipo "Connection" para recuperar as infos da conexão, o objeto do tipo "Properties" para setar as credenciais da conexão com o banco, que será lido do db.properties pelo terceiro objeto do tipo "FileInputStream". 
-(Para saber mais sobres os objetos, recomendo ler sobre elas na web) 
 
 As outras duas classes da package lida apenas com as exceções que podem ocorrer ao instanciar uma nova conexão. 
 
