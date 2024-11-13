@@ -2,8 +2,8 @@
 
 ### O projeto consiste em 3 pckages: A referente ao Database e suas configs, a que trabalha com as entidades e os DAOs (Repositorios) e a main onde o programa roda. 
 
-#### Antes de falar das packages e suas funcionalidades, vc precisa inserir a dependencia do jdbc no seu projeto. 
-Você vai preciasr criar uma pasta dentro do 'src" com o nome de ".project" e lá vc vai inserir a dependencia, é um codigo tipo esse 
+#### Antes de falar das packages e suas funcionalidades, vc precisa inserir a """dependencia""" do jdbc no seu projeto. 
+Você vai preciasr criar uma pasta dentro do 'src" com o nome de ".project" e lá vc vai inserir a """dependencia""", é um codigo tipo esse 
 <br></br>
 ![Screenshot_20241105_175211](https://github.com/user-attachments/assets/7b0e699e-0a6a-44e5-83e1-b8888347c3f3)
 <br></br>
